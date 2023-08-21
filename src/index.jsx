@@ -22,7 +22,9 @@ const renderApp = () => {
   const APP_ID = "app_root";
   const RUNNER_KEY = `${APP_ID}_runner`;
 
-  global[RUNNER_KEY] = (targetElementId) => {
+  global[RUNNER_KEY] = (targetElementId, url, config) => {
+    console.log('url', url);
+    console.log('config', config);
     const root = ReactDOM.createRoot(document.getElementById(targetElementId));
     root.render(
       <React.StrictMode>
