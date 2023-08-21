@@ -5,7 +5,6 @@ import "./index.css";
 import logo from "./logo.svg";
 
 function App() {
-  console.log('entrou');
   return (
     <div className="App">
       <header className="App-header">
