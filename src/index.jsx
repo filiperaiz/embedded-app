@@ -25,7 +25,6 @@ const renderApp = () => {
 
   global[RUNNER_KEY] = (targetElementId) => {
     const root = ReactDOM.createRoot(document.getElementById(targetElementId));
-    console.log('root', root);
     root.render(
       <React.StrictMode>
         <App />
@@ -34,7 +33,6 @@ const renderApp = () => {
   };
 
   if (!global.embedded) {
-    window[RUNNER_KEY]("root");
     console.log('window[RUNNER_KEY]', window[RUNNER_KEY]);
   }
 };
