@@ -5,6 +5,7 @@ import "./index.css";
 import logo from "./logo.svg";
 
 function App() {
+  console.log('entrou');
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +25,7 @@ const renderApp = () => {
 
   global[RUNNER_KEY] = (targetElementId) => {
     const root = ReactDOM.createRoot(document.getElementById(targetElementId));
+    console.log('root', root);
     root.render(
       <React.StrictMode>
         <App />
@@ -33,6 +35,7 @@ const renderApp = () => {
 
   if (!global.embedded) {
     window[RUNNER_KEY]("root");
+    console.log('window[RUNNER_KEY]', window[RUNNER_KEY]);
   }
 };
 
