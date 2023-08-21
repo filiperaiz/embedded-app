@@ -32,7 +32,7 @@ const renderApp = () => {
   };
 
   if (!global.embedded) {
-    console.log('window[RUNNER_KEY]', window[RUNNER_KEY]);
+    window[RUNNER_KEY]("root");
   }
 };
 
