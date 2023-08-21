@@ -22,13 +22,26 @@ function App() {
 
 
 const renderApp = () => {
-  const root = ReactDOM.createRoot(document.getElementById('root'))
+  
+  
+  const APP_ID = 'app_root'
+  const RUNNER_KEY = `${APP_ID}_runner`
+  
+  
+  
+  global[RUNNER_KEY] = (targetElementId) => {
+    const root = ReactDOM.createRoot(document.getElementById(targetElementId))
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  }
 
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  )
+  if (!global.embedded) {
+    window[RUNNER_KEY]('root')
+  } 
+
 }
 
 renderApp()
