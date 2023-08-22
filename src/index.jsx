@@ -19,12 +19,11 @@ function App() {
 }
 
 const renderApp = () => {
-  const APP_ID = "app_root";
+  const APP_ID = "embedded_app";
   const RUNNER_KEY = `${APP_ID}_runner`;
 
-  global[RUNNER_KEY] = (targetElementId, url, config) => {
-    console.log('url', url);
-    console.log('config', config);
+  global[RUNNER_KEY] = (targetElementId, config) => {
+    console.log("config", config);
     const root = ReactDOM.createRoot(document.getElementById(targetElementId));
     root.render(
       <React.StrictMode>
