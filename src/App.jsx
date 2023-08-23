@@ -5,6 +5,7 @@ import logo from "./logo.svg";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import SignPage from "./pages/Sign";
+import TestPage from "./pages/Test";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/sign">Sign</Link>
+            <Link to="/test">Test</Link>
           </nav>
         </div>
         <div className="embedded-main">
@@ -24,6 +26,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/sign" element={<SignPage />} />
+            <Route path="/test" element={<TestPage />} />
           </Routes>
         </div>
       </div>
